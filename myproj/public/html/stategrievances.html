@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Specific Grievances</title>
+    <link rel="stylesheet" href="StateSpecificGrievances.css">
+    <style>
+        /* Basic styling, adjust as needed */
+        .state-grievances-container {
+            margin-top: 7%;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .state-dropdown {
+            /* align-items: center; */
+            padding: 10px;
+            font-size: 16px;
+            
+        }
+    
+        .instructions {
+            font-family: Arial, sans-serif;
+            margin-top: 20%;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="state-grievances-container">
+        <h2>Select Your State to File Grievance</h2>
+        <select id="stateDropdown" class="state-dropdown">
+            <option value="">-- Select Your State --</option>
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </div>
+
+         <!-- Instructions Section -->
+         <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Select your state from the dropdown list.</li>
+                <li>Your browser will open a new tab with the official website of your state's grievance portal.</li>
+                <li>Follow the instructions on the state website to file your grievance.</li>
+                <li>If you encounter any issues, please contact the state support for assistance.</li>
+                <li>Ensure that you have the necessary documents and information ready before submitting your grievance.</li>
+            </ol>
+        </div>
+    
+
+    <script>
+        // State grievances data
+        const stateGrievances = [
+            { name: 'Andhra Pradesh', url: 'https://www.ap.gov.in/' },
+            { name: 'Arunachal Pradesh', url: 'https://www.arunachalpradesh.gov.in/' },
+            { name: 'Assam', url: 'https://assam.gov.in/' },
+            { name: 'Bihar', url: 'https://state.bihar.gov.in/' },
+            { name: 'Chhattisgarh', url: 'https://www.cgstate.gov.in/' },
+            { name: 'Goa', url: 'https://www.goa.gov.in/' },
+            { name: 'Gujarat', url: 'https://gujaratindia.gov.in/' },
+            { name: 'Haryana', url: 'https://haryana.gov.in/' },
+            { name: 'Himachal Pradesh', url: 'https://himachal.nic.in/' },
+            { name: 'Jharkhand', url: 'https://www.jharkhand.gov.in/' },
+            { name: 'Karnataka', url: 'https://www.karnataka.gov.in/' },
+            { name: 'Kerala', url: 'https://kerala.gov.in/' },
+            { name: 'Madhya Pradesh', url: 'https://www.mp.gov.in/' },
+            { name: 'Maharashtra', url: 'https://www.maharashtra.gov.in/' },
+            { name: 'Manipur', url: 'https://www.manipur.gov.in/' },
+            { name: 'Meghalaya', url: 'https://meghalaya.gov.in/' },
+            { name: 'Mizoram', url: 'https://mizoram.gov.in/' },
+            { name: 'Nagaland', url: 'https://nagaland.gov.in/' },
+            { name: 'Odisha', url: 'https://odisha.gov.in/' },
+            { name: 'Punjab', url: 'https://punjab.gov.in/' },
+            { name: 'Rajasthan', url: 'https://www.rajasthan.gov.in/' },
+            { name: 'Sikkim', url: 'https://www.sikkim.gov.in/' },
+            { name: 'Tamil Nadu', url: 'https://www.tn.gov.in/' },
+            { name: 'Telangana', url: 'https://www.telangana.gov.in/' },
+            { name: 'Tripura', url: 'https://tripura.gov.in/' },
+            { name: 'Uttar Pradesh', url: 'https://www.up.gov.in/' },
+            { name: 'Uttarakhand', url: 'https://uk.gov.in/' },
+            { name: 'West Bengal', url: 'https://wb.gov.in/' }
+        ];
+
+        // Populate the dropdown menu with options
+        const dropdown = document.getElementById('stateDropdown');
+        stateGrievances.forEach(state => {
+            const option = document.createElement('option');
+            option.value = state.url;
+            option.textContent = state.name;
+            dropdown.appendChild(option);
+        });
+
+        // Handle state selection
+        dropdown.addEventListener('change', (e) => {
+            const selectedUrl = e.target.value;
+            if (selectedUrl) {
+                window.open(selectedUrl, '_blank'); // Open the state website in a new tab
+            }
+        });
+    </script>
+</body>
+</html>

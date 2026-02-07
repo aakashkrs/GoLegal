@@ -1,0 +1,93 @@
+/* Overall overlay to cover the entire screen */
+.terms-popup-overlay {
+    position: fixed; /* Sticks the overlay to the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for dimming effect */
+    display: flex; /* Centers the popup */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above all other elements */
+}
+
+/* Main container for the popup */
+.terms-popup {
+    background-color: #ffffff; /* White background for contrast */
+    width: 90%; /* Default width for mobile view */
+    max-width: 500px; /* Cap the width for desktop view */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded edges for a modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Drop shadow for depth */
+    animation: fadeIn 0.4s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Title styling */
+.terms-title {
+    font-size: 24px; /* Large title */
+    font-weight: bold;
+    color: #98142c; /* Matching your core color */
+    margin-bottom: 15px; /* Space below the title */
+    text-align: center; /* Center-align the title */
+}
+
+/* Content section styling */
+.terms-content {
+    font-size: 16px; /* Base font size */
+    color: #333333; /* Dark color for readability */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Space below the content */
+}
+
+/* Actions section containing the button */
+.terms-actions {
+    display: flex;
+    justify-content: center; /* Center the button */
+}
+
+/* Agree button styling */
+.agree-btn {
+    padding: 10px 20px; /* Padding for comfortable clicking */
+    background-color: #98142c; /* Core color for the button */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button edges */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.agree-btn:hover {
+    background-color: #ffcccb; /* Lighter red color for hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .terms-popup {
+        width: 95%; /* Adjust width to fit better on smaller screens */
+        padding: 15px; /* Reduce padding to save space */
+    }
+
+    .terms-title {
+        font-size: 20px; /* Slightly smaller title for mobile */
+    }
+
+    .terms-content {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .agree-btn {
+        padding: 8px 15px; /* Smaller padding for the button */
+    }
+}

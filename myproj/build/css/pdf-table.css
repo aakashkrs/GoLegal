@@ -1,0 +1,93 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.opportunity {
+    max-width: 100%; /* Ensure it fits within the viewport width */
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.opportunity h1, .opportunity h2, .opportunity h3 {
+    color: #98142c;
+}
+
+table {
+    width: 100%; /* Ensure table fits within its container */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding and border in table's total width */
+    overflow-x: auto;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+table th {
+    background: #f8f8f8;
+    text-align: left;
+}
+
+table a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    line-height: 1.4;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* .opportunity {
+        padding: 15px; /* Adjust padding for smaller screens 
+    } */
+
+    table th, table td {
+        /* padding: 8px; Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    table {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .opportunity {
+        /* margin: 10px; Reduce margin for very small screens */
+        /* padding: 10px; Reduce padding for very small screens */
+    }
+
+    table th, table td {
+        /* padding: 5px; Further reduce padding for very small screens */
+        font-size: 12px; /* Adjust font size for very small screens */
+    }
+
+    ul li {
+        /* padding: 3px 0; Reduce padding for very small screens */
+    }
+}

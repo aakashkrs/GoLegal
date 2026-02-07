@@ -1,0 +1,82 @@
+.blog {
+    background-color: #f9f5f1;
+    text-align: center; /* Corrected align-text to text-align */
+}
+
+.blog .slick-prev, .blog .slick-next {
+    font-size: 24px;
+    color: #98142c;
+    background: #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1;
+}
+
+.blog .slick-prev {
+    left: 0px;
+}
+
+.blog .slick-next {
+    right: 0px;
+}
+
+.blog .slick-prev:hover, .blog .slick-next:hover {
+    color: white;
+    background: #98142c;
+}
+
+.blog .slick-slide {
+    padding: 0 15px;
+    display: flex; /* Add flex to center content */
+    justify-content: center; /* Center align */
+}
+
+.blog .blog-item {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 15px; /* Adjust padding as needed */
+    margin: 0; /* Remove right margin */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.blog .blog-item img {
+    width: 100%;
+    height: 200px;
+}
+
+.blog .blog-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.blog .blog-item .meta {
+    font-size: 14px;
+    color: #999999;
+    padding: 0 2%;
+}
+
+.blog .blog-item p {
+    font-size: 14px;
+    padding: 0 2%;
+}
+
+.blog .blog-item a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 auto; /* Center the button */
+    font-size: 14px;
+    color: #98142c;
+    background-color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #98142c;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.blog .blog-item a.btn:hover {
+    color: #ffffff;
+    background-color: #98142c;
+}

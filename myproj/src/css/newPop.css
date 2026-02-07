@@ -1,0 +1,137 @@
+/* General overlay styles for the popup */
+.complaint-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the popup is above other elements */
+}
+
+/* Main popup container styles */
+.complaint-popup {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    max-height: auto; /* Let the height adjust naturally */
+    overflow-y: hidden; /* No scrolling */
+}
+
+/* Close button in the top-right corner */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Title for the popup */
+.popup-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Form styling inside the popup */
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap between fields */
+}
+
+/* General input, select, and textarea styles */
+.popup-input, .popup-select, .popup-textarea {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Text area specific styling */
+.popup-textarea {
+    height: 80px; /* Reduced height */
+    resize: none; /* Disable manual resizing */
+}
+
+/* Submit button styling */
+.popup-submit {
+    background-color: #d32f2f; /* Red color for submit button */
+    color: #fff;
+    padding: 8px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for submit button */
+.popup-submit:hover {
+    background-color: #b71c1c; /* Darker red on hover */
+}
+
+/* Responsive Styles for smaller devices */
+@media (max-width: 768px) {
+    /* Popup width adjustment for smaller screens */
+    .complaint-popup {
+        width: 80%; /* Slightly smaller width for tablets */
+        padding: 10px;
+        max-width: 350px; /* Limit max width on smaller screens */
+    }
+
+    /* Adjust font size for titles and inputs on smaller screens */
+    .popup-title {
+        font-size: 16px; /* Slightly smaller title */
+    }
+
+    .popup-input, .popup-select, .popup-textarea {
+        font-size: 12px; /* Smaller input font */
+        padding: 6px; /* Smaller padding */
+    }
+
+    .popup-submit {
+        padding: 6px; /* Smaller padding */
+        font-size: 12px; /* Smaller font */
+    }
+}
+
+/* Extra small screens (like mobile phones) */
+@media (max-width: 480px) {
+    .complaint-popup {
+        width: 90%; /* Popup will take up 90% of the screen width */
+        padding: 8px;
+        border-radius: 10px;
+        max-width: 320px; /* Limit width on smaller phones */
+    }
+
+    /* Title font size for small screens */
+    .popup-title {
+        font-size: 14px; /* Smaller font for titles */
+    }
+
+    /* Adjust input and text sizes for small screens */
+    .popup-input, .popup-select, .popup-textarea {
+        font-size: 10px; /* Even smaller font */
+        padding: 5px; /* Less padding */
+    }
+
+    .popup-submit {
+        font-size: 10px; /* Smaller font size for the button */
+        padding: 6px; /* Less padding */
+    }
+}
+

@@ -1,0 +1,244 @@
+/*******************************/
+/******* Single Page CSS *******/
+/*******************************/
+/* Flexbox container to hold both sections */
+.container-blog {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure the container takes up the full width of its parent */
+}
+
+/* Styles for the main blog content */
+.single {
+    flex: 1; /* Take up the remaining space */
+    padding: 45px 30px 65px 20px;
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+.single .blog-detail-content h3{
+    color: #333;
+}
+
+.single .blog-detail-content h4{
+    color: #333;
+}
+
+.single .blog-detail-content h5{
+    color: #333;
+}
+
+.single .blog-detail-content h6{
+    color: #333;
+}
+
+/* Styles for the blog image */
+.single img {
+    margin: 10px 0 15px 0;
+    width: 100%; /* Make image width 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Content styling */
+.single .blog-detail-content {
+    font-size: large;
+}
+
+.single .blog-detail-content img {
+    width: 70%;
+    height: auto;
+}
+.single .table,
+.single .list-group {
+    margin-bottom: 30px;
+}
+
+.single .ul-group {
+    padding: 0;
+    list-style: none;
+}
+
+.single .ul-group li {
+    margin-left: 2px;
+}
+
+.single .ul-group li::before {
+    position: relative;
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.single .ol-group {
+    padding-left: 18px;
+}
+
+
+.related-blogs {
+    width: 30%; /* Keeps width, adjust as needed */
+    background-color: #f9f9f9; /* Light background for distinction */
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 10px;
+}
+
+.related-blogs h2 {
+    font-size: 30px;
+    color: #800020;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.related-blogs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+.related-blogs li {
+    display: flex; /* Use Flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 1rem;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.related-blogs li:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight hover shadow */
+    background-color: #f7f7f7; /* Slight color change */
+}
+
+
+.related-blogs img {
+    width: 25%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.related-blogs a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-blogs a p {
+    margin: 0;
+
+    line-height: 1.4;
+
+}
+
+
+
+/* 'Read More' Button for Each Related Blog */
+
+.related-blogs a.btn {
+    margin-top: 10px;
+    padding: 5px 15px;
+    color: #ffffff;
+    background-color: #800020;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container-blog {
+        flex-direction: column; /* Stack content vertically on mobile */
+    }
+
+    .single {
+        width: 100%; /* Full width on mobile */
+        padding: 30px 15px 50px 15px;
+    }
+
+    .single h1 {
+        font-size: x-large;
+    }
+
+    .single img {
+        width: 100%; /* Full width of its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .single .table,
+    .single .list-group {
+        margin-bottom: 20px;
+    }
+
+    .single .blog-detail-content {
+        font-size: smaller;
+    }
+
+    .single .blog-detail-content h3{
+        color: #333;
+    }
+    
+    .single .blog-detail-content h4{
+        color: #333;
+    }
+    
+    .single .blog-detail-content h5{
+        color: #333;
+    }
+    
+    .single .blog-detail-content h6{
+        color: #333;
+    }
+
+    .single .blog-detail-content img {
+        width: 80%;
+        height: auto;
+    }
+    
+    .related-blogs {
+        width: 100%; /* Full width on mobile */
+        margin-top: -15%; /* Remove margin for mobile view */
+        padding: 15px 0; /* Add vertical padding for spacing */
+    }
+
+    .related-blogs ul {
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    .related-blogs li {
+        display: flex; /* Use Flexbox for horizontal layout */
+        align-items: center; /* Center items vertically */
+        margin-bottom: 1rem;
+        width: 100%; /* Ensure list item uses full width */
+    }
+
+    .related-blogs img {
+        width: 20%; /* Adjust width for mobile view */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between image and title */
+    }
+
+    .related-blogs a {
+        display: flex; /* Ensure title and link behave as flex items */
+        flex: 1; /* Allow title area to take remaining space */
+        text-decoration: none;
+        color: #000;
+    }
+
+    .related-blogs a p {
+        margin: 0; /* Remove default margin from paragraphs */
+        padding: 0; /* Remove default padding */
+    }
+}
+
+
+/* Styles for the related blogs section */
+

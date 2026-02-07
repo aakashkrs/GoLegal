@@ -1,0 +1,142 @@
+/* Base Styles for Mobile */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container for main content */
+.opportunity {
+    max-width: 100%; /* Fit within the viewport width */
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Headings styles */
+.opportunity h1, 
+.opportunity h2, 
+.opportunity h3, 
+strong, 
+u {
+    color: #98142c;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 16px;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+/* Link styles */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+table th, 
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+}
+
+table th {
+    background: #f8f8f8;
+    text-align: left;
+}
+
+/* Bullet list container */
+.bullet-container {
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.bullet-container p {
+    display: flex;
+    align-items: center;
+}
+
+.bullet-container span:first-of-type {
+    margin-right: 10px; /* Add space between bullet and text */
+}
+
+/* Unordered list styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+    line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust content container padding */
+    .opportunity {
+        padding: 15px;
+    }
+
+    /* Adjust table padding and font size for better fit */
+    table th, 
+    table td {
+        padding: 8px;
+        font-size: 14px; 
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    /* Paragraph adjustment for smaller screens */
+    p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust container margins and padding for very small screens */
+    .opportunity {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /* Further adjustments for table content on very small screens */
+    table th, 
+    table td {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    /* Reduce list item padding on very small screens */
+    ul li {
+        padding: 3px 0;
+    }a
+
+    /* Further reduce paragraph font size on very small screens */
+    p {
+        font-size: 14px;
+    }
+}

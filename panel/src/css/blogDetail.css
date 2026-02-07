@@ -1,0 +1,70 @@
+/* src/css/blogDetail.css */
+
+/* Container for the blog detail page */
+.blog-detail-container {
+    max-width: 800px; /* Maximum width of the blog container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 30px; /* Add padding around the container */
+    padding-left: 150px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center text within the container */
+    /* justify-content: center; */
+  }
+  
+  /* Style for the blog detail image */
+  .blog-detail-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 800px; /* Set a maximum width */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the image */
+  }
+  
+  /* Style for the blog title */
+  .blog-detail-container h2 {
+    font-size: 2.5em; /* Large font size for title */
+    margin-bottom: 10px; /* Space below the title */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Style for the blog subtitle */
+  .blog-detail-container h3 {
+    font-size: 1.5em; /* Medium font size for subtitle */
+    margin-bottom: 15px; /* Space below the subtitle */
+    color: #666; /* Slightly lighter color */
+  }
+  
+  /* Style for the tags and publish status */
+  .blog-detail-container p {
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    margin-bottom: 15px; /* Space below each paragraph */
+    color: #444; /* Text color */
+  }
+  
+  /* Style for the blog content */
+  .blog-detail-content {
+    font-size: 1em; /* Standard font size for content */
+    line-height: 1.6; /* Increase line height for readability */
+    color: #333; /* Text color */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Ensure images within the blog content are responsive and centered */
+  .blog-detail-content img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block display for margin to work */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /* Ensure links in content are styled appropriately */
+  .blog-detail-content a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .blog-detail-content a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  

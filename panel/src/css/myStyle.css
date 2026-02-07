@@ -1,0 +1,97 @@
+/* Container for the edit form */
+.edit-form-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the select dropdown */
+.edit-form-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.edit-form-container select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styling for the input field */
+.edit-form-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.edit-form-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styling for buttons */
+.edit-form-container button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Submit button */
+.edit-form-container button.submit-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+}
+
+.edit-form-container button.submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* Cancel button */
+.edit-form-container button.cancel-btn {
+    background-color: #6c757d; /* Bootstrap secondary color */
+}
+
+.edit-form-container button.cancel-btn:hover {
+    background-color: #565e64;
+    transform: scale(1.02);
+}
+
+/* Styling for the Edit link */
+.edit-link {
+    color: #007bff; /* Bootstrap primary color */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.edit-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+/* Ensure complaint text wraps and stays within the container */
+.additional-details {
+    word-wrap: break-word;
+    white-space: normal; /* Allows text to wrap to the next line */
+    overflow-wrap: break-word; /* Breaks long words onto the next line */
+    max-width: 100%; /* Prevents content from overflowing */
+}
+
+/* Optional styling for complaint content */
+.additional-details p {
+    margin: 5px 0; /* Spacing between paragraphs */
+}

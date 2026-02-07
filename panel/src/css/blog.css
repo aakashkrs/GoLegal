@@ -1,0 +1,200 @@
+/* Base styles for the CreateBlog component */
+.myangleStyle {
+  background-color: white;
+  margin: 0 auto;
+  margin-left: 280px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* overflow-y: auto; Add vertical scroll if content overflows */
+  height: 100vh; /* Make sure it takes the full viewport height */
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+}
+
+.page-header {
+  background: #000;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 130vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents overflow from the header */
+}
+
+.mask.bg-gradient-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.create-blog-bg {
+  background: linear-gradient(87deg, #2d2d2d 0%, #1b1b1b 100%);
+}
+
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden; /* Prevents the content from overflowing outside the card */
+}
+
+.card-header {
+  position: relative;
+  border-bottom: 0;
+}
+
+.card-body {
+  padding: 2rem;
+  overflow-y: auto; /* Allows scrolling inside the card if content overflows */
+  max-height: 80vh; /* Limits card body height to ensure scroll behavior */
+}
+
+.create-blog-bg h4 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.input-group-outline {
+  margin-bottom: 1.5rem;
+}
+
+.input-group-outline .form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-control {
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  padding: 0.75rem 1.25rem;
+}
+
+.form-check-input {
+  margin-right: 0.5rem;
+}
+
+.create-blog-bg.btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+}
+
+.create-blog-bg.btn:hover {
+  background-color: #0056b3;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-gradient {
+  background: linear-gradient(87deg, #007bff, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .col-md-10 {
+    max-width: 100%;
+  }
+}
+
+/* Style adjustments for Quill editor */
+.ql-container {
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  overflow: auto; /* Allow scrolling within the Quill container */
+}
+
+.ql-editor {
+  min-height: 200px; /* Adjust as needed */
+  color: black;
+  overflow: auto; /* Ensure the editor itself is scrollable */
+}
+
+.ql-toolbar {
+  border-bottom: 1px solid #ced4da;
+}
+
+.ql-toolbar .ql-formats {
+  margin: 0;
+}
+
+.ql-toolbar button {
+  border: none;
+  background: transparent;
+  color: #333;
+}
+
+.ql-toolbar button:hover {
+  color: #007bff;
+}
+
+.ql-editor p {
+  margin-bottom: 0.5rem;
+}
+
+.ql-editor table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ql-editor table, .ql-editor th, .ql-editor td {
+  border: 1px solid #ced4da;
+}
+
+.ql-editor th, .ql-editor td {
+  padding: 0.5rem;
+}

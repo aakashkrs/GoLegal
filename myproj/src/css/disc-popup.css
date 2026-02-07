@@ -1,0 +1,59 @@
+/* disc-popup.css */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120vw;
+    height: 120vh;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it is above all other content */
+    overflow: hidden; /* Prevent scrolling within the popup */
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px; /* Adjust as needed */
+    text-align: center;
+    position: relative; /* Ensure it remains in place */
+  }
+  
+  .popup-content p {
+    margin-bottom: 15px;
+  }
+  
+  .popup-content label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .popup-content input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .popup-content button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  /* Prevent body scroll when popup is active */
+  body.popup-active {
+    overflow: hidden;
+  }
+  

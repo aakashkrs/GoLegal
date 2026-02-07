@@ -1,0 +1,2464 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+/* Apply zoom out effect to the whole website */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto; /* Prevent scrollbars */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    color: #666666;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 400; */
+}
+
+@media (max-width: 991.98px) {   
+    body {
+        color: #666666;
+        background: #ffffff;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .wrapper {
+        transform: scale(0.85); /* Scale down to fit better */
+        transform-origin: top left; /* Ensure scaling is anchored at the top left */
+        width: 100vw; /* Ensure it fits within the viewport */
+        height: auto; /* Let height be determined by content */
+        overflow-y: auto; /* Enable vertical scrolling within the wrapper */
+        max-height: 100vh; /* Limit height to viewport for scrolling */
+    }
+}
+
+
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+
+
+/* body {
+    color: #666666;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+} */
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 100;
+    font-style: italic;
+    color: white;
+}
+
+a {
+    color: #454545;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #98142c;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.wrapper {
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 110.1vw;
+    height: 105.1vh;
+    overflow: auto;
+    color: #666666;
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #98142c;
+    color: white;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    color: #98142c;
+    background: white;
+}
+
+.back-to-top i {
+    padding-top: 10px;
+}
+
+
+/**********************************/
+/********** Top Bar CSS ***********/
+/**********************************/
+/* General Styles */
+.top-bar {
+    position: relative;
+    height: 60px;
+    background: rgb(255, 255, 255);
+    padding: 0 60px;
+}
+
+.top-bar .logo {
+    padding: 15px 0;
+    text-align: left;
+    overflow: hidden; /* Keeps image within its container */
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center logo vertically */
+    justify-content: flex-start; /* Align logo to the left */
+}
+
+/* Ensure the logo image is responsive and maintains its aspect ratio */
+.top-bar .logo img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any unwanted space below image */
+    max-height: 150px; /* Optional: Set a max height to avoid excessive size */
+    margin-top:-35%;
+}
+
+.top-bar .logo h1 {
+    margin-top: 5px;
+    color: #800020;
+    font-size: 30px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.top-bar .top-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 45px;
+    padding: 0 20px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .text h2 {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    margin: 0;
+}
+
+.top-bar .text p {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+}
+
+.top-bar .social {
+    display: flex;
+    height: 45px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.top-bar .social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 100%;
+    font-size: 14px;
+    color: black;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.top-bar .social a:hover {
+    color: #800020;
+    background: #ffffff;
+}
+
+.contact-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #800020;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 15px;
+    border: 1px solid #ddd;
+}
+
+
+.contact-button:hover {
+    background-color: gray;
+    color: black;
+    border-color: black;
+}
+
+/* Mobile Top Bar Styles */
+.mobile-top-bar {
+    display: none; /* Hidden by default */
+    background: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.mobile-top-bar .mobile-social {
+    margin-bottom: 10px;
+}
+
+.mobile-top-bar .mobile-social a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.mobile-top-bar .mobile-social a:hover {
+    color: #800020;
+}
+
+.mobile-top-bar .mobile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mobile-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #800020;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.mobile-button:hover {
+    background-color: gray;
+    color: black;
+    border-color: black;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .top-bar {
+        display: none; /* Hide the top-bar on mobile devices */
+    }
+
+    .mobile-top-bar {
+        display: block; /* Show mobile top bar on smaller screens */
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-top-bar {
+        display: none; /* Hide mobile top bar on larger screens */
+    }
+}
+
+
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+/* General Styles */
+.nav-bar {
+    position: relative;
+    padding: 2px 0; /* Reduced padding to decrease height */
+    background-color: #98142c; /* Set background color */
+    transition: .3s;
+}
+
+.nav-bar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2px 0; /* Reduced padding to decrease height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    z-index: 999;
+    background-color: #98142c; /* Set background color */
+}
+
+.nav-bar .navbar {
+    height: auto; /* Ensure height adapts to content */
+    padding: 0;
+}
+
+.menu-mobile{
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 45%;
+}
+
+
+
+.navbar-nav .nav-link,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    padding: 4px 8px; /* Reduced padding to decrease height */
+    color: #ffffff; /* Set text color to white */
+    line-height: 1.2; /* Reduced line height to fit within reduced height */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffcccb; /* Light color on hover */
+    transition: none;
+}
+
+.nav-bar .navbar-brand {
+    color: white;
+}
+
+.nav-bar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #ffffff; /* Set dropdown background to white */
+}
+
+.nav-bar .btn {
+    color: #ffffff; /* Set button text color to white */
+    border: 2px solid #ffffff; /* Set button border color to white */
+    border-radius: 0;
+    padding: 4px 10px; /* Reduced padding to decrease height */
+    margin-top: -1px;
+}
+
+.nav-bar .btn:hover {
+    background: #ffffff; /* Button background color on hover */
+    color: #98142c; /* Button text color on hover */
+}
+
+@media (min-width: 992px) {
+    .nav-bar {
+        padding: 2px 60px; /* Increased padding for a spacious look */
+        background-color: #800020; /* Main background color for desktop */
+    }
+    
+    .nav-bar.nav-sticky {
+        padding: 5px 60px; /* Reduce padding when the navbar becomes sticky */
+    }
+    
+    .nav-bar .navbar-brand {
+        display: none; /* Display brand logo or text prominently */
+        color: #ffffff; /* White text for brand name */
+        font-weight: bold; /* Emphasize brand name */
+        font-size: 24px; /* Larger font size for desktop */
+    }
+
+    /* Navigation links */
+    .nav-bar a.nav-link {
+        padding: 8px 15px; /* Spacing around links for better usability */
+        font-size: 16px; /* Adjusted size for readability on larger screens */
+        text-transform: uppercase; /* Consistent, professional appearance */
+        color: #fff; /* White text color */
+        transition: color 0.3s, background-color 0.3s; 
+    }
+    .nav-bar a.nav-link:hover {
+        display:block;
+    }
+
+    
+    /* Button styling within navbar */
+    .nav-bar .btn {
+        padding: 8px 15px; /* Padding for desktop buttons */
+        margin-top: -1px; /* Align buttons vertically */
+        border-radius: 5px; /* Keep slight roundness for aesthetic */
+        border: 2px solid #ffffff; /* Border to distinguish buttons */
+        color: #fff; /* White button text */
+        transition: background-color 0.3s, color 0.3s; /* Transition effect */
+    }
+    
+    .nav-bar .btn:hover {
+        background: #ffffff; /* Change background to white on hover */
+        color: #800020; /* Red text on hover for contrast */
+    }
+}
+/* Navbar styling for mobile view */
+@media (max-width: 991.98px) {
+    .nav-bar {
+        padding: 6px 0; /* Reduce padding for compact mobile view */
+        background-color: #800020; /* Consistent red color */
+    }
+    
+    .nav-bar .navbar {
+        padding: 2px 0; /* Reduced padding for the inner container */
+        background: #fff; /* Red background for inner container as well */
+    }
+
+    /* Navigation links styling for mobile */
+    .nav-bar a.nav-link {
+        padding: 2px 12px; /* Less padding for mobile, to fit all items */
+        font-size: 14px; /* Smaller font size for space-saving */
+        color: black; /* White text color */
+    }
+
+    /* Mobile menu button (hamburger) styling */
+    .menu-mobile {
+        
+        border: 2px solid white; /* White border for menu icon */
+        padding: 0px; /* Adjusted padding to make button area clickable */
+        margin-right: 25px; /* Space from the right edge */
+        display: flex; /* Flex for alignment */
+        align-items: center; /* Vertically centered */
+        justify-content: center; /* Horizontally centered */
+        background-color: transparent; /* Transparent to only display border */
+    }
+    .navbar-toggler {
+        position: absolute;
+        top: 10px;  /* Align top */
+        right: -20px;  /* Align to the right corner */
+        font-size: 30px;  /* Size of hamburger icon */
+        color: #333;  /* Icon color */
+        z-index: 999;  /* Ensure the hamburger stays on top */
+    }
+   
+    /* Button styling for mobile view */
+    .nav-bar .btn {
+        display: block; /* Block display to make button full-width */
+        width: 100%; /* Take up full width */
+        text-align: center; /* Center the text inside the button */
+        padding: 8px; /* Padding for clickability */
+        margin: 10px 0; /* Space between buttons */
+        border: 2px solid #ffffff; /* Maintain consistent button border */
+        border-radius: 5px; /* Rounded edges for button aesthetics */
+        color: #ffffff; /* White text */
+    }
+    
+    .nav-bar .btn:hover {
+        background: #ffffff; /* White background for hover effect */
+        color: #800020; /* Text changes to red for contrast */
+    }
+
+    /* Dropdown menu styling */
+    .nav-bar .dropdown-menu {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+        border-radius: 8px; /* Keep dropdowns looking consistent */
+        background: #ffffff; /* White dropdown menu */
+    
+    }
+}
+
+
+
+/*******************************/
+/******** Carousel CSS *********/
+/*******************************/
+/*******************************/
+/******** Carousel CSS *********/
+/*******************************/
+.carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 170px);
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .carousel-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.carousel .carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 170px);
+}
+
+.carousel .carousel-caption h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-caption p {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.carousel .carousel-caption .btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #800020;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.carousel .carousel-caption .btn:hover {
+    color: #98142c;
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 767.98px) {
+    .carousel {
+        height: 58vh;
+    }
+    .carousel .carousel-caption h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .carousel .carousel-caption p {
+        font-size: 20px;
+    }
+    
+    .carousel .carousel-caption .btn {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+    .carousel .carousel-caption p {
+        font-size: 16px;
+    }
+    
+    .carousel .carousel-caption .btn {
+        padding: 10px 25px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+
+
+
+
+/*******************************/
+/******* Page Header CSS *******/
+/*******************************/
+.page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 90px 0;
+    text-align: center;
+    background: #98142c;
+}
+
+.page-header h2 {
+    position: relative;
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.page-header h2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 2px;
+    left: calc(50% - 50px);
+    bottom: 0;
+    background: white;
+}
+
+.page-header a {
+    position: relative;
+    padding: 0 12px;
+    font-size: 22px;
+    color: white;
+}
+
+.page-header a:hover {
+    color: #ffffff;
+}
+
+.page-header a::after {
+    position: absolute;
+    content: "/";
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    right: -7px;
+    text-align: center;
+    color: white;
+}
+
+.page-header a:last-child::after {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .page-header h2 {
+        font-size: 35px;
+    }
+    
+    .page-header a {
+        font-size: 18px;
+    }
+}
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.section-header h2::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 7px;
+    left: 0;
+    top: 21px;
+    background: transparent;
+    border-top: 1px solid #98142c;
+    border-bottom: 1px solid #98142c;
+    z-index: -1;
+}
+
+.section-header h2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 7px;
+    left: 0;
+    bottom: 20px;
+    background: transparent;
+    border-top: 1px solid #98142c;
+    border-bottom: 1px solid #98142c;
+    z-index: -1;
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+
+/*******************************/
+/******** Top Feature CSS ******/
+/*******************************/
+.feature-top {
+    position: relative;
+    background: white;
+    margin-bottom: 45px;
+}
+
+.feature-top .col-md-3 {
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+@media (max-width: 575.98px) {
+    .feature-top .col-md-3:nth-child(1n) {
+        border-right: none;
+    }
+    
+    .feature-top .col-md-3:last-child {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .feature-top .col-md-3:nth-child(2n) {
+        border-right: none;
+    }
+    
+    .feature-top .col-md-3:nth-child(3n),
+    .feature-top .col-md-3:nth-child(4n) {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .feature-top .col-md-3 {
+        border-bottom: none;
+    }
+    
+    .feature-top .col-md-3:nth-child(4n) {
+        border-right: none;
+    }
+}
+
+.feature-top .feature-item {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.feature-top .feature-item i {
+    color: #98142c;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature-top .feature-item h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.feature-top .feature-item p {
+    color: #999999;
+    margin: 0;
+    font-size: 18px;
+}
+
+/* *************************
+***********popup complaint
+************************** */
+/* Overall overlay to cover the entire screen */
+.complaint-popup-overlay {
+    position: fixed; /* Sticks the overlay to the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for dimming effect */
+    display: flex; /* Centers the popup */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above all other elements */
+}
+
+/* Main container for the complaint popup */
+.complaint-popup {
+    background-color: #ffffff; /* White background for contrast */
+    width: 90%; /* Default width for mobile view */
+    max-width: 500px; /* Cap the width for desktop view */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded edges for a modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Drop shadow for depth */
+    animation: fadeIn 0.4s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Title styling for the complaint popup */
+.complaint-title {
+    font-size: 24px; /* Large title */
+    font-weight: bold;
+    color: #98142c; /* Matching your core color */
+    margin-bottom: 15px; /* Space below the title */
+    text-align: center; /* Center-align the title */
+}
+
+/* Content section styling */
+.complaint-content {
+    font-size: 16px; /* Base font size */
+    color: #333333; /* Dark color for readability */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Space below the content */
+}
+
+/* Actions section containing the buttons */
+.complaint-actions {
+    display: flex;
+    justify-content: space-between; /* Space out buttons */
+    align-items: center;
+    gap: 10px;
+}
+
+/* "File a Complaint" button styling */
+.file-complaint-btn {
+    padding: 10px 20px; /* Padding for comfortable clicking */
+    background-color: #98142c; /* Core color for the button */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button edges */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.file-complaint-btn:hover {
+    background-color: #ffcccb; /* Lighter red color for hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Close button styling */
+.close-btn {
+    padding: 10px 20px;
+    background-color: #333333; /* Dark color for close button */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.close-btn:hover {
+    background-color: #555555; /* Lighter dark color for hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .complaint-popup {
+        width: 95%; /* Adjust width to fit better on smaller screens */
+        padding: 15px; /* Reduce padding to save space */
+    }
+
+    .complaint-title {
+        font-size: 20px; /* Slightly smaller title for mobile */
+    }
+
+    .complaint-content {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .file-complaint-btn, .close-btn {
+        padding: 8px 15px; /* Smaller padding for the buttons */
+    }
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about-us {
+    font-family: 'Poppins', sans-serif; /* Font family for the entire section */
+    color: #333; /* Default text color */
+}
+
+/* Section 1: Introduction */
+.about-intro {
+    display: flex; /* Use flexbox for layout */
+    gap: 2rem; /* Space between elements */
+    padding: 4rem 2rem; /* Padding around the section */
+    background-color: #f9f5f1; /* Light background color */
+}
+
+.intro-image {
+    width: 50%; /* Set width for the image container */
+    height: 400px; /* Fixed height for the image */
+    background-color: #ddd; /* Fallback color */
+}
+
+.intro-image img {
+    width: 100%; /* Image takes the full width */
+    height: 100%; /* Ensure image covers the height */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.intro-content {
+    width: 50%; /* Set width for the text content */
+}
+
+.intro-content h2 {
+    color: #b48d60; /* Color for the subheading */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+.intro-content h1 {
+    font-size: 2.5rem; /* Main heading size */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.main-text {
+    margin-bottom: 1.5rem; /* Space below main text */
+    line-height: 1.8; /* Line height for better readability */
+}
+
+.quote {
+    font-style: italic; /* Italic style for quotes */
+    color: #b48d60; /* Quote color */
+    font-size: 1.2rem; /* Quote font size */
+}
+
+.sub-text {
+    margin-bottom: 2rem; /* Space below the sub-text */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.learn-more {
+    padding: 0.8rem 2rem; /* Padding for the button */
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Section 2: Stats */
+.about-stats {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space between items */
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color for stats section */
+    padding: 3rem 2rem; /* Padding around the section */
+    text-align: center; /* Center text alignment */
+}
+
+.stat-item {
+    width: 30%; /* Set width for each stat item */
+}
+
+.stat-item h3 {
+    font-size: 3rem; /* Heading size for stats */
+    margin-bottom: 0.5rem; /* Space below the heading */
+    color: #b48d60; /* Color for stat heading */
+}
+
+.stat-item p {
+    font-size: 1.1rem; /* Font size for stat description */
+}
+
+/* Section 3: Contact */
+.contact-us {
+    display: flex; /* Use flexbox for layout */
+    gap: 2rem; /* Space between elements */
+    padding: 4rem 2rem; /* Padding around the section */
+}
+
+.contact-image {
+    width: 50%; /* Set width for the contact image */
+    height: 300px; /* Fixed height for the image */
+    background-color: #ddd; /* Fallback color */
+}
+
+.contact-image img {
+    width: 100%; /* Image takes the full width */
+    height: 100%; /* Ensure image covers the height */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.contact-content {
+    width: 50%; /* Set width for the contact text */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+}
+
+.contact-content h2 {
+    font-size: 2rem; /* Size for the contact heading */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.contact-content p {
+    margin-bottom: 2rem; /* Space below the paragraph */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.contact-button {
+    padding: 0.8rem 2rem; /* Padding for the button */
+    background-color: #98142c; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-intro, .contact-us {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
+
+    .intro-image, .contact-image {
+        width: 100%; /* Full width for images on mobile */
+        height: 250px; /* Adjust height for mobile */
+    }
+
+    .intro-content, .contact-content {
+        width: 100%; /* Full width for content on mobile */
+        text-align: center; /* Center text on mobile */
+        padding: 1rem; /* Add padding for better spacing */
+    }
+
+    .about-stats {
+        flex-direction: column; /* Stack stats items vertically on small screens */
+    }
+
+    .stat-item {
+        width: 100%; /* Full width for stat items on mobile */
+        margin-bottom: 2rem; /* Space below each stat item */
+    }
+
+    .learn-more {
+        width: 100%; /* Full width for buttons on mobile */
+        padding: 1rem; /* Increased padding for easier touch targets */
+        margin-top: 1rem; /* Space above buttons */
+    }
+    
+        .contact-button {
+            width: 70%; /* Full width for buttons on mobile */
+            padding: 1rem; /* Increased padding for easier touch targets */
+            margin-top: 1rem; /* Space above buttons */
+            right:0;
+            left:0;
+    }
+
+    .main-text, .sub-text {
+        margin-bottom: 1rem; /* Reduce space on mobile for better fit */
+        line-height: 1.5; /* Slightly tighter line height */
+    }
+
+    .quote {
+        font-size: 1rem; /* Smaller font size for quotes on mobile */
+    }
+
+    .intro-content h1, .contact-content h2 {
+        font-size: 1.8rem; /* Adjust heading size for mobile */
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem; /* Adjust stat heading size for mobile */
+    }
+
+    .stat-item p {
+        font-size: 1rem; /* Adjust stat description font size for mobile */
+    }
+}
+
+
+
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.service .service-icon {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+}
+
+.service .service-icon i {
+    width: 100px;
+    height: 100px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 60px;
+    color: #98142c;
+    background: white;
+    transition: .5s;
+}
+
+.service .service-item:hover .service-icon i {
+    margin-top: -15px;
+}
+
+.service .service-item h3 {
+    margin: 0;
+    padding: 25px 15px 15px 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #98142c;
+}
+
+.service .service-item p {
+    margin: 0;
+    color: #999999;
+    padding: 0 25px 25px 25px;
+    font-size: 18px;
+}
+
+.service .service-item a.btn {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #98142c;
+    border: 2px solid #98142c;
+    border-radius: 0;
+    background: white;
+    transition: .3s;
+}
+
+.service .service-item:hover a.btn {
+    color: white;
+    background: #98142c;
+}
+
+
+/*******************************/
+/********* Services Tabs CSS *********/
+/*******************************/
+
+/* Container for the entire content */
+.services-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Wrapper for the services tabs and details */
+.services-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Limit width to ensure space on sides */
+    width: 100%;
+    background-color: #f8f9fa; /* Background color for the wrapper */
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for depth */
+}
+
+/* Left panel for tabs */
+.tabs {
+    width: 30%;
+    background-color: #343a40; /* Dark background for tabs */
+    color: #fff; /* Text color for tabs */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #495057; /* Darken color on hover */
+}
+
+.tab.active {
+    background-color: #007bff; /* Active tab color */
+}
+
+/* Right panel for service details */
+.details {
+    width: 70%;
+    padding: 20px;
+}
+
+.service-details {
+    background-color: #fff; /* White background for details */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow for details */
+}
+
+.btn {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color for button */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Hover color for button */
+}
+
+
+
+/*******************************/
+/********* Feature CSS *********/
+/*******************************/
+.feature {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.feature .feature-item {
+    margin-bottom: 30px;
+}
+
+.feature .feature-icon {
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.feature .feature-icon i {
+    width: 100px;
+    height: 100px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 60px;
+    color: #98142c;
+    background: #000000;
+    transition: .5s;
+}
+
+.feature .feature-item:hover .feature-icon i {
+    margin-right: -15px;
+}
+
+.feature .feature-item h3 {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.feature .feature-item h3::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #98142c;
+}
+
+.feature .feature-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.feature .feature-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: white;
+}
+
+.feature .feature-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*******************************/
+/*********** Team CSS **********/
+/*******************************/
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+}
+
+.team .team-img {
+    position: relative;
+}
+
+.team .team-img img {
+    width: 100%;
+    height: 250px;
+}
+
+.team .team-text {
+    position: relative;
+    padding: 50px 15px 30px 15px;
+    text-align: center;
+    background: white;
+}
+
+.team .team-text h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #98142c;
+}
+
+.team .team-text p {
+    margin: 0;
+    color: #999999;
+}
+
+.team .team-social {
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 50px;
+    top: -25px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #98142c;
+    font-size: 0;
+    transition: .5s;
+}
+
+.team .team-item:hover .team-social {
+    width: 100%;
+    left: 0;
+}
+
+.team .team-social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    transition: .3s;
+}
+
+.team .team-social a:last-child {
+    margin-right: 0;
+}
+
+.team .team-social a:hover {
+    color: #ffffff;
+}
+
+
+/*******************************/
+/*********** FAQs CSS **********/
+/*******************************/
+.faqs {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.faqs .faqs-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: white;
+}
+
+.faqs .faqs-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 767.98px) {
+    .faqs .faqs-img {
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+.faqs .card {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #98142c;
+}
+
+.faqs .card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #98142c;
+}
+
+.faqs .card-header {
+    padding: 0;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs .card-header a {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.faqs .card-header a span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    background: white;
+    color: #98142c;
+    font-weight: 700;
+}
+
+.faqs .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-body {
+    padding: 15px 0 0 0;
+    font-size: 16px;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs a.btn {
+    position: relative;
+    margin-top: 15px;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #98142c;
+    border: 2px solid #98142c;
+    border-radius: 0;
+    background: white;
+    transition: .3s;
+}
+
+.faqs a.btn:hover {
+    color: white;
+    background: #98142c;
+}
+
+
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.testimonial {
+    position: relative;
+    padding: 45px 0;
+}
+
+.testimonial .testimonials-carousel {
+    position: relative;
+    width: calc(100% + 30px);
+    left: -15px;
+    right: -15px;
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    margin: 0 15px;
+    padding: 30px;
+    background: white;
+    overflow: hidden;
+}
+
+.testimonial .testimonial-item i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #333333;
+    font-size: 60px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.testimonial .testimonial-item .col-12 {
+    margin-top: 20px;
+}
+
+.testimonial .testimonial-item img {
+    width: 100%;
+}
+
+.testimonial .testimonial-item h2 {
+    color: #98142c;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial .testimonial-item p {
+    color: #999999;
+    font-size: 16px;
+    margin: 0;
+}
+
+.testimonial .owl-nav,
+.testimonial .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.testimonial .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #98142c;
+}
+
+.testimonial .owl-dot.active {
+    background: white;
+}
+
+
+/*******************************/
+/*********** Blog CSS **********/
+/*******************************/
+.blog {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.blog .blog-carousel {
+    position: relative;
+    width: calc(100% + 30px);
+    left: -15px;
+    right: -15px;
+}
+
+.blog .blog-item {
+    position: relative;
+    margin: 0 15px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.blog .blog-page .blog-item {
+    margin: 0 0 30px 0;
+}
+
+.blog .blog-page .blog-item img {
+    width: 100%;
+    margin-bottom: 25px;
+    height: 200px;
+}
+
+.blog .blog-item h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.blog .blog-item .meta {
+    padding: 0 0 15px 0;
+}
+
+.blog .blog-item .meta * {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #999999;
+}
+
+.blog .blog-item .meta i {
+    margin: 0 2px 0 10px;
+}
+
+.blog .blog-item .meta i:first-child {
+    margin-left: 0;
+}
+
+.blog .blog-item p {
+    font-size: 16px;
+}
+
+.blog .blog-item a.btn {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #98142c;
+    transition: .3s;
+}
+
+.blog .blog-item a.btn i {
+    margin-left: 10px;
+}
+
+.blog .blog-item a.btn:hover {
+    color: white;
+}
+
+.blog .owl-nav,
+.blog .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.blog .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #98142c;
+}
+
+.blog .owl-dot.active {
+    background: white;
+}
+
+.blog .pagination .page-link {
+    color: white;
+    border-radius: 0;
+    border-color: #98142c;
+}
+
+.blog .pagination .page-link:hover,
+.blog .pagination .page-item.active .page-link {
+    color: white;
+    background: #98142c;
+}
+
+.blog .pagination .disabled .page-link {
+    color: #999999;
+}
+
+
+/*******************************/
+/********* Timeline CSS ********/
+/*******************************/
+.timeline {
+    position: relative;
+    padding: 45px 0;
+}
+
+.timeline .timeline-start {
+    position: relative;
+    width: calc(100% + 30px);
+    left: -15px;
+    right: -15px;
+}
+
+.timeline .timeline-container {
+    padding: 0 15px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+    margin-top: -5px;
+}
+
+.timeline .timeline-container.left {
+    left: 0;
+}
+
+.timeline .timeline-container.right {
+    left: 50%;
+}
+
+.timeline .timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: #98142c;
+    z-index: 1;
+}
+
+.timeline .timeline-container.left::before {
+    top: 0;
+    right: 0;
+}
+
+.timeline .timeline-container.right::before {
+    bottom: 0;
+    left: 0;
+}
+
+.timeline .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: #98142c;
+    z-index: 1;
+}
+
+.timeline .timeline-container.left::after {
+    bottom: 0;
+    right: 0;
+}
+
+.timeline .timeline-container.right::after {
+    top: 0;
+    left: 0;
+}
+
+.timeline .timeline-container:first-child::before,
+.timeline .timeline-container:last-child::before {
+    display: none;
+}
+
+.timeline .timeline-container .timeline-content {
+    padding: 30px;
+    background: white;
+    position: relative;
+    border-right: 5px solid #98142c;
+}
+
+.timeline .timeline-container.right .timeline-content {
+    border-left: 5px solid #98142c;
+}
+
+.timeline .timeline-container .timeline-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #98142c;
+}
+
+.timeline .timeline-container .timeline-content h2 span {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 5px 10px;
+    color: white;
+    background: #98142c;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.timeline .timeline-container .timeline-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #999999;
+}
+
+@media (max-width: 767.98px) {
+    .timeline .timeline-container {
+        width: 100%;
+        margin-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+    }
+    
+    .timeline .timeline-container:last-child {
+        padding-bottom: 0;
+    }
+    
+    .timeline .timeline-container.right {
+        left: 0%;
+    }
+
+    .timeline .timeline-container.left::after, 
+    .timeline .timeline-container.right::after,
+    .timeline .timeline-container.left::before,
+    .timeline .timeline-container.right::before {
+        width: 5px;
+        height: 35px;
+        left: 15px;
+    }
+    
+    .timeline .timeline-container.left .timeline-content,
+    .timeline .timeline-container.right .timeline-content {
+        border-left: 5px solid #98142c;
+        border-right: none;
+    }
+}
+
+
+/*******************************/
+/******** Portfolio CSS ********/
+/*******************************/
+.portfolio {
+    position: relative;
+    padding: 45px 0;
+    background: #ffffff;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: -15px 0 25px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.portfolio #portfolio-flters li,
+.portfolio .load-more .btn {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    color: #98142c;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    background: white;
+    border: 2px solid #98142c;
+    transition: .3s;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    background: #98142c;
+    color: white;
+}
+
+.portfolio .load-more {
+    text-align: center;
+}
+
+.portfolio .load-more .btn {
+    padding: 15px 35px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.portfolio .load-more .btn:hover {
+    color: white;
+    background: #98142c;
+}
+
+.portfolio .portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.portfolio .portfolio-item:hover {
+    margin-top: -10px;
+}
+
+.portfolio .portfolio-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.portfolio img {
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.portfolio figure {
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0), rgba(0, 0, 0, 1) 90%);
+}
+
+.portfolio figure p {
+    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.portfolio figure p::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #ffffff;
+}
+
+.portfolio figure a {
+    font-family: 'EB Garamond', serif;
+    color: #98142c;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+    transition: .3s;
+}
+
+.portfolio figure a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.portfolio figure span {
+    position: relative;
+    color: #999999;
+    font-size: 16px;
+}
+
+
+
+
+/*******************************/
+/********* Advertisement CSS *********/
+/*******************************/
+.advertisement {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.advertisement img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*******************************/
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+    background-color: #f8f9fa; /* Subtle background color for contrast */
+}
+
+.contact .contact-info {
+    margin-bottom: 30px;
+    padding: 30px;
+    background: white;
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact .contact-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid #98142c; /* Main color for borders */
+    background-color: #98142c; /* Core color for background */
+    color: white; /* White text for contrast */
+    border-radius: 6px; /* Slightly rounded for a cleaner look */
+}
+
+.contact .contact-item i {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #98142c; /* Core color for the icon */
+    background-color: white; /* White background for icons */
+    border-radius: 50%; /* Circular icons */
+    margin-right: 15px; /* Spacing between icon and text */
+    border: 2px solid white; /* White border around the icons */
+}
+
+.contact .contact-text {
+    padding-left: 10px;
+}
+
+.contact .contact-text h2 {
+    color: white; /* White text for better readability */
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.contact .contact-text p {
+    margin: 0;
+    color: white; /* Keeping text white to stand out on the core color background */
+    font-size: 16px;
+    line-height: 1.5;
+}
+.contact .contact-text a {
+    margin: 0;
+    color: white; /* Keeping text white to stand out on the core color background */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact .contact-text a:hover {
+    margin: 0;
+    color: #333; /* Keeping text white to stand out on the core color background */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact .contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact .contact-form {
+    margin-bottom: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #98142c; /* Main color for input borders */
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.contact .contact-form textarea {
+    height: 150px;
+}
+
+.contact .contact-form .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white; /* White text on core color background */
+    background: #98142c; /* Main button color */
+    border: 2px solid #98142c;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.contact .contact-form .btn:hover {
+    color: #98142c; /* Core color text on white background when hovered */
+    background: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .contact .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact .contact-item i {
+        margin-bottom: 10px;
+    }
+    
+    .contact .contact-text h2 {
+        font-size: 20px;
+    }
+
+    .contact .contact-text a:hover {
+        margin: 0;
+        color: #333; /* Keeping text white to stand out on the core color background */
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .contact .contact-form input,
+    .contact .contact-form textarea {
+        padding: 12px;
+    }
+    
+    .contact .contact-form .btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+    }
+}
+
+
+/*******************************/
+/********** Newsletter *********/
+/*******************************/
+.newsletter {
+    position: relative;
+    max-width: 900px;
+    margin: 45px auto -140px auto;
+    padding: 30px 15px;
+    background: #98142c;
+    z-index: 1;
+}
+
+.newsletter .section-header {
+    margin-bottom: 25px;
+}
+
+.newsletter .section-header h2::before,
+.newsletter .section-header h2::after {
+    border-color: #ffffff;
+}
+
+.newsletter .form {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter input {
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 0;
+}
+
+.newsletter .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #98142c;
+    background: white;
+    border-radius: 0;
+    border: 2px solid #98142c;
+    transition: .3s;
+}
+
+.newsletter .btn:hover {
+    color: white;
+    background: #98142c;
+}
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    margin-top: 25px;
+    padding-top: 45px;
+    background: white;
+    color: #ffffff;
+}
+
+.footer .footer-about,
+.footer .footer-link,
+.footer .footer-contact {
+    position: relative;
+    margin-bottom: 45px;
+    color: #999999;
+}
+
+.footer .footer-about h2,
+.footer .footer-link h2,
+.footer .footer-contact h2{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #98142c;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #999999;
+    transition: .3s;
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #98142c;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 20px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #98142c;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #999999;
+}
+
+.footer .footer-menu .f-menu {
+    position: relative;
+    padding: 15px 0;
+    background: #333;
+    font-size: 0;
+    text-align: center;
+}
+
+.footer .footer-menu .f-menu a {
+    color: #999999;
+    font-size: 16px;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.footer .footer-menu .f-menu a:hover {
+    color: #98142c;
+}
+
+.footer .footer-menu .f-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+
+.footer .copyright {
+    padding: 30px 15px;
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #999999;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #98142c;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+/* General Styles */
+body {
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+  
+  /* Main content container */
+  .main-content {
+    padding: 20px;
+  }
+  
+  /* Privacy Card Styling */
+  .privacy-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 800px; /* Limit max width for larger screens */
+  }
+  
+  /* Header for Privacy Policy */
+  .privacy-header {
+    background-color: #98142c;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .privacy-header h3 {
+    color: #fff;
+    font-size: 28px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  /* Section and Typography */
+  .privacy-section {
+    margin-bottom: 30px;
+  }
+  
+  .privacy-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .privacy-header h3 {
+      font-size: 22px;
+    }
+  
+    .privacy-section {
+      margin-bottom: 20px;
+    }
+  
+    .privacy-text {
+      font-size: 14px;
+    }
+  
+    .card-body {
+      padding: 20px;
+    }
+  
+    /* For smaller screens, ensure the card stretches to the edges */
+    .privacy-card {
+      max-width: 100%;
+      box-shadow: none; /* Remove shadow to make it more minimal */
+      padding: 10px; /* Reduce padding */
+      border-radius: 0; /* Remove border radius for a cleaner look */
+    }
+  }
+  
+  

@@ -1,0 +1,35 @@
+.state-grievances-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.state-dropdown {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.state-dropdown:hover {
+    border-color: #007bff;
+}
+
+.state-dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .state-dropdown {
+        width: 90%;
+    }
+}
